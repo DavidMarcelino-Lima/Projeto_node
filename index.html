@@ -41,5 +41,26 @@
 <script src="index.js"></script>
 <script src="validations.js"></script>
 <script src="loading.js"></script>
+<script src="https://www.gstatic.com/firebasejs/11.7.3/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/11.7.3/firebase-auth.js"></script>
+<script>
+      const firebaseConfig = {
+    apiKey: "AIzaSyCtU7a5A2xKcno7cVlC9BSrL71yQKZJrDI",
+    authDomain: "cadastro-8d308.firebaseapp.com",
+    projectId: "cadastro-8d308",
+    storageBucket: "cadastro-8d308.firebasestorage.app",
+    messagingSenderId: "123176329648",
+    appId: "1:123176329648:web:899112fa158462a3a93675"
+  };
+firebase.initializeApp(firebaseConfig);
+
+console.log('antes');
+firebase.auth().signInWithEmailAndPassword("any@emial.com", "123456").then(response => {
+    console.log('success', response)
+}).catch(erro => {
+    console.log('erro', error)
+});
+console.log('depois');
+</script>
 
 </html>
